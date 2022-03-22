@@ -15,9 +15,13 @@ public class Ring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y > player.position.y)
+        /*if (transform.position.y > player.position.y)
         {
             FindObjectOfType<AudioManager>().Play("whoosh");
+            GameManager.numberOfPassedRings++;
+        }*/
+        if (transform.position.y > (player.position.y+5))
+        {
             GameManager.numberOfPassedRings++;
             Destroy(gameObject);
         }
